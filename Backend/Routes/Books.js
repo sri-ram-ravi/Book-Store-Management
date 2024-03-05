@@ -19,7 +19,7 @@ bookRouters.post("/addbook",async(req,res)=>{
             return res.status(201).send({CreatedBookDetails:createdBookDetails})
         }
     }catch(error){
-        res.status(500).send({message:error.message})
+        res.status(500).send({message:`Internal Server Error: An unexpected error occurred.${error.message}`})
     }
 })
 
@@ -32,7 +32,7 @@ bookRouters.get("/getbooks",async(req,res)=>{
             return res.status(200).send({ bookdetails: allBookDetails });
         }
     }catch(error){
-        res.status(500).send({message:error.message})
+        res.status(500).send({message:`Internal Server Error: An unexpected error occurred.${error.message}`})
     }
 })
 
@@ -53,7 +53,7 @@ bookRouters.get("/getbook/:id?",async(req,res)=>{
             }
         }
     }catch(error){
-        res.status(500).send({message:error.message})
+        res.status(500).send({message:`Internal Server Error: An unexpected error occurred.${error.message}`})
     }
 })
 
@@ -84,7 +84,7 @@ bookRouters.put("/updatebook/:id?",async(req,res)=>{
         }
         }
     }catch(error){
-        res.status(500).send({message:error.message})
+        res.status(500).send({message:`Internal Server Error: An unexpected error occurred.${error.message}`})
     }
 })
 
@@ -105,7 +105,7 @@ bookRouters.delete("/deletebook/:id?",async(req,res)=>{
             }   
         }
     }catch(error){
-        res.status(500).send({message:error.message})
+        res.status(500).send({message:`Internal Server Error: An unexpected error occurred.${error.message}`})
     }
 })
 
