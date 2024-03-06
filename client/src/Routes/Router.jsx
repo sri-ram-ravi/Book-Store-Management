@@ -6,9 +6,9 @@ const Router = () => {
     <Routes>
       <Route path='/' element={<Home/>}/>
       <Route path='/createbook' element={<CreateBook/>}/>
-      <Route path='/showbook' element={<ShowBook/>}/>
-      <Route path='/updatebook' element={<EditBook/>}/>
-      <Route path='/deletebook' element={<DeleteBook/>}/>
+      <Route path='/showbook/:id' element={<ShowBook/>}/>
+      <Route path='/updatebook/:id' element={<EditBook/>}/>
+      <Route path='/deletebook/:id' element={<DeleteBook/>}/>
     </Routes>
   )
 }
