@@ -1,6 +1,10 @@
+import Router from "./Routes/Router"
+
 const App = () => {
   return (
-    <div className="text-center">Hello world</div>
+    <main>
+      <Router/>
+    </main>
   )
 }
 
