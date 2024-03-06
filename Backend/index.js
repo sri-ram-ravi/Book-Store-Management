@@ -8,6 +8,7 @@ const bookRouters = require("./Routes/Books");
 const app = express();
 
 app.use(express.json());
+app.use(cors())
 
 const PORT = process.env.PORT || 3000;
 const BOOK_STORE_LOCAL_DB_URL = process.env.BOOK_STORE_LOCAL_DB_URL;
